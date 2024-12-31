@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.8
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -7,7 +7,7 @@ import Foundation
 let package = Package(
     name: "swift-testing-revolutionary",
     platforms: [
-        .macOS(.v14),
+        .macOS(.v13),
     ],
     products: [
         .executable(
@@ -69,8 +69,7 @@ let package = Package(
                 .target(name: "RevolutionKit"),
             ]
         ),
-    ],
-    swiftLanguageModes: [.v6]
+    ]
 )
 
 let isDevelopment = ProcessInfo.processInfo.environment["SWIFT_TESTING_REVOLUTIONARY_DEVELOPMENT"] == "1"
